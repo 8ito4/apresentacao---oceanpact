@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIMB - Experiência do Usuário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        climb: {
+                            50: '#f0f0ff',
+                            100: '#e0e0ff',
+                            200: '#c7c7ff',
+                            300: '#a3a3ff',
+                            400: '#7a7aff',
+                            500: '#252563',
+                            600: '#271D66',
+                            700: '#1a1a3f',
+                            800: '#16162f',
+                            900: '#12121f',
+                        },
+                        accent: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'spin-slow': 'spin 2s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-inter bg-gradient-to-br from-black via-gray-900 to-[#271D66] min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative py-16 flex items-center justify-center overflow-hidden bg-white">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23252563" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        
+        <!-- Animated Background Elements -->
+        <!-- Removido o efeito luminoso -->
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <!-- Logo Section -->
+            <div class="mb-8">
+                <img src="image.png" alt="CLIMB Logo" class="h-32 w-auto filter brightness-1.2 contrast-1.2 mx-auto">
+            </div>
+            
+            <!-- Title Section -->
+            <h1 class="text-5xl md:text-6xl font-black text-climb-600 mb-4 leading-tight">
+                Experiência do
+                <span class="block text-accent-500">
+                    Usuário
+                </span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-climb-500 font-light mb-6 leading-relaxed">
+                Demonstração da Plataforma de Treinamento
+            </p>
+            
+            <!-- Decorative Elements -->
+            <div class="flex justify-center items-center gap-4 mb-8">
+                <div class="w-3 h-3 bg-accent-500 rounded-full animate-pulse"></div>
+                <div class="w-2 h-2 bg-climb-400 rounded-full animate-pulse" style="animation-delay: 0.2s;"></div>
+                <div class="w-1 h-1 bg-accent-400 rounded-full animate-pulse" style="animation-delay: 0.4s;"></div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator - Removido -->
+        
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg class="w-full h-32 text-[#271D66]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <!-- Primeira onda - mais suave -->
+                <path d="M0,120V73.71c47.79-22.2,103.59-32.17,158-28,70.36,5.37,136.33,33.31,206.8,37.5C438.64,87.57,512.34,66.33,583,47.95c69.27-18,138.3-24.88,209.4-13.08,36.15,6,69.85,17.84,104.45,29.34C989.49,95,1113,134.29,1200,67.53V120Z" opacity=".15" class="shape-fill"></path>
+                
+                <!-- Segunda onda - média -->
+                <path d="M0,120V104.19C13,83.08,27.64,63.14,47.69,47.95,99.41,8.73,165,9,224.58,28.42c31.15,10.15,60.09,26.07,89.67,39.8,40.92,19,84.73,46,130.83,49.67,36.26,2.85,70.9-9.42,98.6-31.56,31.77-25.39,62.32-62,103.63-73,40.44-10.79,81.35,6.69,119.13,24.28s75.16,39,116.92,43.05c59.73,5.85,113.28-22.88,168.9-38.84,30.2-8.66,59-6.17,87.09,7.5,22.43,10.89,48,26.93,60.65,49.24V120Z" opacity=".3" class="shape-fill"></path>
+                
+                <!-- Terceira onda - principal -->
+                <path d="M0,120V114.37C149.93,61,314.09,48.68,475.83,77.43c43,7.64,84.23,20.12,127.61,26.46,59,8.63,112.48-12.24,165.56-35.4C827.93,42.78,886,24.76,951.2,30c86.53,7,172.46,45.71,248.8,84.81V120Z" class="shape-fill"></path>
+                
+                <!-- Onda adicional para mais suavidade -->
+                <path d="M0,120V117.5C200,80,400,60,600,70C800,80,1000,100,1200,110V120Z" opacity=".4" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section class="relative py-16 px-6 bg-gradient-to-b from-[#271D66] to-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- URL Input Section -->
+                <div class="space-y-8">
+                    <div class="text-center lg:text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                            Teste Agora
+                        </h2>
+                        <p class="text-xl text-climb-200 leading-relaxed">
+                            Digite uma URL e veja como ela aparece no dispositivo móvel
+                        </p>
+                    </div>
+                    
+                    <!-- URL Input Card -->
+                    <div class="bg-white/10 backdrop-blur-lg rounded-3xl border border-white/20 p-8 shadow-2xl hover:shadow-accent-500/20 transition-all duration-500">
+                        <div class="flex gap-4 mb-6">
+                            <div class="flex-1 relative">
+                                <i class="bi bi-link-45deg absolute left-4 top-1/2 transform -translate-y-1/2 text-accent-300 text-xl"></i>
+                                <input type="url" id="url-input" 
+                                       class="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-2xl text-white placeholder-climb-200 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent transition-all duration-300"
+                                       placeholder="Digite a URL do site (ex: https://google.com)">
+                            </div>
+                            <button id="load-btn" 
+                                    class="px-6 py-4 bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2 shadow-lg shadow-accent-500/25">
+                                <i class="bi bi-arrow-right text-xl" id="load-icon"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Examples -->
+                        <div class="space-y-4">
+                            <p class="text-climb-200 font-medium">Exemplos:</p>
+                            <div class="flex flex-wrap gap-3">
+                                <button class="example-btn group px-4 py-3 bg-white/10 hover:bg-accent-500 border border-white/20 hover:border-accent-400 rounded-xl text-climb-200 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-accent-500/25"
+                                        data-url="https://google.com">
+                                    <i class="bi bi-search text-lg group-hover:scale-110 transition-transform text-accent-300 group-hover:text-white"></i>
+                                    <span class="font-medium">Google</span>
+                                </button>
+                                <button class="example-btn group px-4 py-3 bg-white/10 hover:bg-accent-500 border border-white/20 hover:border-accent-400 rounded-xl text-climb-200 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-accent-500/25"
+                                        data-url="https://facebook.com">
+                                    <i class="bi bi-facebook text-lg group-hover:scale-110 transition-transform text-accent-300 group-hover:text-white"></i>
+                                    <span class="font-medium">Facebook</span>
+                                </button>
+                                <button class="example-btn group px-4 py-3 bg-white/10 hover:bg-accent-500 border border-white/20 hover:border-accent-400 rounded-xl text-climb-200 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg hover:shadow-accent-500/25"
+                                        data-url="https://youtube.com">
+                                    <i class="bi bi-youtube text-lg group-hover:scale-110 transition-transform text-accent-300 group-hover:text-white"></i>
+                                    <span class="font-medium">YouTube</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Simulator -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <!-- Phone Frame -->
+                        <div class="phone-frame bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl border border-gray-600 relative">
+                            <!-- Status Bar -->
+                            <div class="status-bar bg-black rounded-t-[2.5rem] px-6 py-3 flex justify-between items-center text-white text-sm font-semibold">
+                                <div class="flex items-center gap-2">
+                                    <span class="time" id="status-time">14:30</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="bi bi-signal-4 text-xs"></i>
+                                    <i class="bi bi-wifi text-xs"></i>
+                                    <i class="bi bi-battery-full text-xs"></i>
+                                </div>
+                            </div>
+
+                            <!-- Screen -->
+                            <div class="phone-screen bg-white rounded-b-[2.5rem] overflow-hidden relative">
+                                <iframe id="mobile-frame" src="about:blank" class="w-full h-full border-0"></iframe>
+                                <div id="placeholder" class="placeholder absolute inset-0 bg-gradient-to-br from-climb-50 to-climb-100 flex items-center justify-center">
+                                    <div class="text-center p-8">
+                                        <div class="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                                            <i class="bi bi-globe text-3xl text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-climb-800 mb-2">Digite uma URL acima</h3>
+                                        <p class="text-climb-600">O site aparecerá aqui como no celular</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Home Indicator -->
+                            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white rounded-full"></div>
+                        </div>
+
+                        <!-- Phone Shadow -->
+                        <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-64 h-16 bg-black/30 rounded-full blur-xl"></div>
+                        
+                        <!-- Floating Elements - Removidas as bolinhas decorativas -->
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4">
+                        <button id="refresh-btn" 
+                                class="control-btn group px-6 py-3 bg-white/10 hover:bg-accent-500 border border-white/20 hover:border-accent-400 rounded-2xl text-climb-200 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2 backdrop-blur-lg shadow-lg hover:shadow-accent-500/25">
+                            <i class="bi bi-arrow-clockwise text-lg group-hover:rotate-180 transition-transform duration-500 text-accent-300 group-hover:text-white"></i>
+                            <span class="font-medium">Atualizar</span>
+                        </button>
+                        <button id="fullscreen-btn" 
+                                class="control-btn group px-6 py-3 bg-white/10 hover:bg-accent-500 border border-white/20 hover:border-accent-400 rounded-2xl text-climb-200 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-2 backdrop-blur-lg shadow-lg hover:shadow-accent-500/25">
+                            <i class="bi bi-arrows-fullscreen text-lg group-hover:scale-110 transition-transform text-accent-300 group-hover:text-white"></i>
+                            <span class="font-medium">Fullscreen</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="fixed top-6 right-6 z-50 space-y-4"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
