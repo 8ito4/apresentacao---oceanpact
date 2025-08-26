@@ -107,12 +107,30 @@ class MobileSimulator {
             this.showNotification('Site carregado com sucesso!');
         });
         
-        // Handle errors
+        // Handle errors and blocked iframes
         this.mobileFrame.addEventListener('error', () => {
             this.hideLoading();
             this.showNotification('Erro ao carregar o site. Verifique a URL.', 'error');
             this.showPlaceholder();
         });
+        
+        // Check if iframe is blocked after a timeout
+        setTimeout(() => {
+            try {
+                // Try to access iframe content - if it fails, it's likely blocked
+                const iframeDoc = this.mobileFrame.contentDocument || this.mobileFrame.contentWindow.document;
+                if (!iframeDoc) {
+                    this.hideLoading();
+                    this.showNotification('Este site não permite ser exibido no simulador (política de segurança). Tente outro site.', 'error');
+                    this.showPlaceholder();
+                }
+            } catch (e) {
+                // If we can't access the iframe content, it's likely blocked
+                this.hideLoading();
+                this.showNotification('Este site não permite ser exibido no simulador (política de segurança). Tente outro site.', 'error');
+                this.showPlaceholder();
+            }
+        }, 3000);
     }
     
     isValidUrl(string) {
@@ -196,6 +214,10 @@ class MobileSimulator {
     }
     
     showNotification(message, type = 'success') {
+        // Remove all existing notifications first
+        const container = document.getElementById('notification-container');
+        container.innerHTML = '';
+        
         const notification = document.createElement('div');
         notification.className = 'notification';
         if (type === 'error') {
@@ -203,7 +225,6 @@ class MobileSimulator {
         }
         notification.textContent = message;
         
-        const container = document.getElementById('notification-container');
         container.appendChild(notification);
         
         // Animate in
